@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get install openjdk-17-jdk -y
 COPY . /app
 
-RUN apt-get install maven -4.0.0
+RUN apt-get install maven -y
 RUN cd app && mvn clean install
 
 EXPOSE 8080
