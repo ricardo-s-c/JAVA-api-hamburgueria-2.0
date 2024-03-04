@@ -1,10 +1,10 @@
 FROM ubuntu:latest
 
 RUN apt-get update
-RUN apt-get install openjdk-21-jdk -y
+RUN apt-get install openjdk-17-jdk -y
 COPY . /app
 
-RUN apt-get install maven -y
+RUN apt-get install maven -3.2.2
 RUN cd app && mvn clean install
 
 EXPOSE 8080
